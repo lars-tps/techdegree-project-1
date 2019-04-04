@@ -30,6 +30,20 @@ def start_game():
     ( You can add more features/enhancements if you'd like to. )
     """
     # write your code inside this function.
+    print(f"""
+    {"-"*10}
+    Welcome to the number guessing game!
+    {"-"*10}
+    """)
+    answer = random.randint(0,10)
+    user_guess = int(input("What's your guess?"  ))
+    while user_guess != answer:
+        if user_guess < answer:
+            user_guess = int(input("It's higher!"))
+        if user_guess > answer:
+            user_guess = int(input("It's lower!"))
+    print("You got it! Thanks for playing.")
+
 
 
 if __name__ == '__main__':
