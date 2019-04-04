@@ -1,1 +1,1 @@
-# techdegree project 1
+This is my repo for the first project
