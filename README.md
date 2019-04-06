@@ -1,1 +1,1 @@
-Hah! There's nothing in this readme.
+Hey there! This is a number guessing game written with python. 
