@@ -1,1 +1,1 @@
-This is my repo for the first project
+Hey there! This is a number guessing game written with python. 
