@@ -8,7 +8,7 @@ import random
 
 def yes_or_no(x):
     """
-    Checks the arg for 'y' or 'n'
+    Prompts user for 'y' or 'n'
     if neither, prompts user again for 'y' or 'n'
     """
     x_input = str(input(x))
