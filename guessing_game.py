@@ -11,6 +11,26 @@ NOTE: If you strongly prefer to work locally on your own computer, you can total
 
 import random
 
+def input_prompt(text):
+    while True:
+        user_input = input(f"{text}")
+        if user_input.isdigit() != True:
+            print("**Error**\nThat's not an integer or it's not a positive number!\n")
+            continue
+        elif int(user_input) < 1 or int(user_input) > 10:
+            print("**Error**\nThat number is out of range!\n")
+            continue
+        elif user_input.isdigit() == True and (int(user_input) >= 1 and int(user_input) <= 10):
+            break
+    user_input = int(user_input)
+    return(user_input)
+
+def yes_or_no(x):
+    x_input = str(input(x))
+    while x_input.lower() != "y" and x_input.lower() != "n":
+        print("**Error!**\nPlease only enter 'Y' or 'N'\n")
+        x_input = str(input(x))
+    return(x_input)
 
 def input_prompt(text):
     while True:
