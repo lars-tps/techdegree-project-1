@@ -2,17 +2,15 @@
 Python Web Development Techdegree
 Project 1 - Number Guessing Game
 --------------------------------
-
-For this first project we will be using Workspaces. 
-
-NOTE: If you strongly prefer to work locally on your own computer, you can totally do that by clicking: File -> Download Workspace in the file menu after you fork the snapshot of this workspace.
-
 """
-
 import random
 
 
 def yes_or_no(x):
+    """
+    Checks the arg for 'y' or 'n'
+    if neither, prompts user again for 'y' or 'n'
+    """
     x_input = str(input(x))
     while x_input.lower() != "y" and x_input.lower() != "n":
         print("**Error!**\nPlease only enter 'Y' or 'N'\n")
@@ -21,6 +19,10 @@ def yes_or_no(x):
 
 
 def input_prompt(text):
+    """
+    Prompts user for guesses
+    input must be within range of possible answers else user will be prompted again for input.
+    """
     while True:
         user_input = input(f"{text}")
         if user_input.isdigit() is False:
@@ -29,7 +31,7 @@ def input_prompt(text):
         elif int(user_input) < 1 or int(user_input) > 10:
             print("**Error**\nThat number is out of range!\n")
             continue
-        elif user_input.isdigit() is True and (int(user_input) >= 1 and int(user_input) <= 10):
+        elif user_input.isdigit() is True and (1 <= int(user_input) <= 10):
             break
     user_input = int(user_input)
     return user_input
